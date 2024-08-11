@@ -1,0 +1,34 @@
+{
+    "manifest_version": 2,
+    "name": "WHCMS Tickets Monitor",
+    "version": "1.0",
+    "description": "Monitors Tickets page every minute for specific keywords and notify.",
+    "permissions": [
+        "notifications",
+        "tabs",
+        "<all_urls>",
+        "storage"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "icons": {
+        "48": "icons/icon.png"
+    },
+    "browser_action": {
+        "default_title": "WHMCS Monitor",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}

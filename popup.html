@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            width: 600px;
+            font-family: Arial, sans-serif;
+        }
+        input[type="text"] {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button.suspend {
+            background-color: #f44336;
+        }
+        button.resume {
+            background-color: #4CAF50;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <h3>Monitor Settings</h3>
+    <input type="text" id="url" placeholder="Enter URL">
+    <input type="text" id="keywords" placeholder="Enter keywords (comma-separated)">
+    <button id="save">Save</button>
+    <button id="suspend" class="suspend">Suspend</button>
+    <button id="resume" class="resume">Resume</button>
+
+    <script src="popup.js"></script>
+</body>
+</html>
